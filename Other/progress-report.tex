@@ -1,0 +1,212 @@
+\documentclass[11pt, a4paper]{article}
+    %\usepackage{geometry}
+    \usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+    \pagestyle{empty}
+    \usepackage{graphicx}
+    \usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+    \usepackage[usenames,dvipsnames]{color}
+    \definecolor{darkblue}{rgb}{0,0,.6}
+    \definecolor{darkred}{rgb}{.7,0,0}
+    \definecolor{darkgreen}{rgb}{0,.6,0}
+    \definecolor{red}{rgb}{.98,0,0}
+    \usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+    
+    \pagestyle{fancyplain}
+    \fancyhf{}
+    \lhead{ \fancyplain{}{Team Name: Oil Digger} }
+    \rhead{ \fancyplain{}{CSCI 470 - Project Progress Report} }
+    %\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+    % \fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+    \thispagestyle{plain}
+    
+    %%%%%%%%%%%% LISTING %%%
+    \usepackage{listings}
+    \usepackage{caption}
+    \DeclareCaptionFont{white}{\color{white}}
+    \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+    \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+    \usepackage{verbatim} % used to display code
+    \usepackage{fancyvrb}
+    \usepackage{acronym}
+    \usepackage{amsthm}
+    \VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+    
+    \usepackage{booktabs}
+    
+    \definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+    \definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+    \definecolor{lightlightgray}{gray}{0.93}
+    
+    
+    
+    \lstset{
+    %language=bash,                          % Code langugage
+    basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+    keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+    commentstyle=\color{gray},              % Comments font
+    numbers=left,                           % Line nums position
+    numberstyle=\tiny,                      % Line-numbers fonts
+    stepnumber=1,                           % Step between two line-numbers
+    numbersep=5pt,                          % How far are line-numbers from code
+    backgroundcolor=\color{lightlightgray}, % Choose background color
+    frame=none,                             % A frame around the code
+    tabsize=2,                              % Default tab size
+    captionpos=t,                           % Caption-position = bottom
+    breaklines=true,                        % Automatic line breaking?
+    breakatwhitespace=false,                % Automatic breaks only at whitespace?
+    showspaces=false,                       % Dont make spaces visible
+    showtabs=false,                         % Dont make tabls visible
+    columns=flexible,                       % Column format
+    morekeywords={__global__, __device__},  % CUDA specific keywords
+    }
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{document}
+
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{2in}
+            {\Large \textsc{Project Progress Report}}\\
+            \vspace*{0.1in}
+            CSCI 470: Introduction to Machine Learning\\
+            \vspace*{0.1in}
+            \date{\today}
+            
+            \vspace*{3in}
+            \large{\textbf{Oil Digger}} \\
+            \vspace*{0.1in}
+            % Sort by alphabetical order of last names
+            \large{Nadima Dwihusna} \\
+            \vspace*{0.1in}
+            \large{Mohamed Ibrahim Mohamed} \\
+            \vspace*{0.1in}
+            \large{Xiaoyu (Rosie) Zhu} \\
+        \end{center}
+    \end{titlepage}
+    
+
+    \vskip.15in
+    % Restate the proposed timeline and individual task assignment
+    \noindent\textbf{Original Timeline} \\
+    \noindent\textbf{Timeline} \\
+    \begin{minipage}[t]{.9\textwidth}
+        \begin{center}
+            \begin{tabular}{cccc}
+                \toprule
+                Week Starting & Nadima Dwihusna&Xiaoyu (Rosie) Zhu&Mohamed Mohamed  \\
+                \midrule
+               9/17 &  Obtain Data Sets & Obtain Data Sets and Research & Research on ML Methods\\
+                \hline
+                9/24 &  Data Processing & Data Visualization & Research on ML Methods\\
+                \hline
+                10/1 & Data Processing &Data Visualization& Research on ML Methods\\
+                \hline
+                10/8 & Data Processing & Data Visualization & ML Method Selection\\
+                \hline
+                10/15 & & All: Progress Report (Due Oct18) & \\
+                \hline
+                10/22 & Data Training & Data Prediction & Help Team Members  \\
+                \hline
+                10/29 & Data Training & Data Prediction & Help Team Members \\
+                \hline
+                11/5 & ML Method 1 & ML Method 2 & ML Method 3 \\
+                \hline
+                11/12 & ML Method 1 & ML Method 2 & ML Method 3 \\
+                \hline
+                11/19 & ML Method 1 & ML Method 2 & ML Method 3 \\
+                \hline
+                11/26 & &
+All: Visualize Results with Seismic
+ & \\
+                \hline
+                12/3 & & All: Prepare Final Presentation& \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{minipage}
+        
+
+
+    % Practical Progress Report Template
+    \vskip.15in
+    % Mention the finalized dataset you will be using. Provide urls to the data.
+    \noindent\textbf{Data:} Consequat cillum reprehenderit mollit ullamco Lorem ex pariatur laboris consectetur commodo velit consectetur ipsum ut. Data provided by \url{https://example.com/}
+
+    \vskip.15in
+    % Describe the features from the data and from extraction that you plan on using
+    % Remove this section if Theory Project
+    \noindent\textbf{Features Used:} Do laboris consequat veniam quis fugiat ea laborum non laborum. Minim mollit laborum est enim est excepteur veniam. Sunt enim laboris ex dolore non mollit consequat laboris ipsum ipsum eiusmod et est. Incididunt in consectetur ad sunt. Eu duis exercitation proident non quis dolore ut eu ex veniam. Amet ea ea aliqua mollit pariatur officia cupidatat.
+
+
+    \vskip.15in
+    % Describe the current model you are using, and any preliminary results that you have from it
+    \noindent\textbf{Current Model:} Do laboris consequat veniam quis fugiat ea laborum non laborum. Minim mollit laborum est enim est excepteur veniam. Sunt enim laboris ex dolore non mollit consequat laboris ipsum ipsum eiusmod et est. Incididunt in consectetur ad sunt. Eu duis exercitation proident non quis dolore ut eu ex veniam. Amet ea ea aliqua mollit pariatur officia cupidatat.
+
+    
+
+    \vskip.15in
+    % Describe the actual timeline based on what you actually got done
+    \noindent\textbf{Actual Timeline} \\
+    \begin{minipage}[t]{.9\textwidth}
+        \begin{center}
+            \begin{tabular}{cccc}
+                \toprule
+                Week Starting & Member 1 & Member 2 & Member 3 \\
+                \midrule
+                9/17 & & & \\
+                \hline
+                9/24 & & & \\
+                \hline
+                10/1 & & & \\
+                \hline
+                10/8 & & & \\
+                \hline
+                10/15 & & & \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{minipage}
+
+    \vskip.15in
+    % Describe any issues that came up and how you intend to deal with them
+    \noindent\textbf{Issues, Constraints \& Mitigation Strategies:} Do laboris consequat veniam quis fugiat ea laborum non laborum. Minim mollit laborum est enim est excepteur veniam. Sunt enim laboris ex dolore non mollit consequat laboris ipsum ipsum eiusmod et est. Incididunt in consectetur ad sunt. Eu duis exercitation proident non quis dolore ut eu ex veniam. Amet ea ea aliqua mollit pariatur officia cupidatat.
+
+    Sint in officia irure proident nulla commodo tempor duis reprehenderit adipisicing do reprehenderit. Ad duis id sit fugiat sit eiusmod ut. Consectetur occaecat veniam cillum qui aliquip commodo magna anim do dolor deserunt qui. Elit est incididunt dolore ipsum aute nulla fugiat consectetur enim labore. Minim velit laboris duis qui excepteur excepteur mollit commodo exercitation nisi tempor aute officia excepteur. Irure consectetur irure velit amet consequat exercitation.
+
+
+    \vskip.15in
+    % Describe your new expectations for the project
+    \noindent\textbf{Updated Project Expectation:} Ad sint id deserunt ad amet dolor et magna. Adipisicing voluptate ea nostrud qui aliqua elit consequat minim aliquip elit do aliqua et. Reprehenderit ullamco duis proident minim dolor laboris reprehenderit laborum in laborum ad id. Enim consequat amet laborum nulla qui qui aliquip incididunt aliqua velit et magna deserunt. Excepteur tempor laboris cillum incididunt non.
+
+    Amet est sit dolore laboris sit aute dolor deserunt. Esse incididunt proident et velit commodo quis. Et dolor dolore laboris id minim sunt non nisi exercitation. Qui ullamco exercitation reprehenderit anim id proident. Non do qui officia exercitation elit fugiat consequat et. Commodo amet anim voluptate consequat enim veniam. Deserunt amet velit ad aliquip sunt proident.
+
+    \vskip.15in
+    % Describe the timeline for the future given the way things have turned out
+    \noindent\textbf{Future Timeline} \\
+    \begin{minipage}[t]{.9\textwidth}
+        \begin{center}
+            \begin{tabular}{cccc}
+                \toprule
+                Week Starting & Member 1 & Member 2 & Member 3 \\
+                \midrule
+                10/22 & & & \\
+                \hline
+                10/29 & & & \\
+                \hline
+                11/5 & & & \\
+                \hline
+                11/12 & & & \\
+                \hline
+                11/19 & & & \\
+                \hline
+                11/26 & & & \\
+                \hline
+                12/3 & & & \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{minipage}
+        
+        %%%%%% THE END 
+    \end{document} 
